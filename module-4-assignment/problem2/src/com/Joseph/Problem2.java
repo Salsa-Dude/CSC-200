@@ -12,8 +12,6 @@ import java.util.SortedMap;
 // Print a paycheck for the employee.
 
 
-
-
 public class Problem2 {
 
 
@@ -33,7 +31,7 @@ public class Problem2 {
         double hours = keyboard.nextDouble();
 
         double salary = 0;
-        String formatSalary;
+        String formatSalary = "";
 
 
         if (hours <= 40) {
@@ -42,14 +40,12 @@ public class Problem2 {
 
         } else if (hours > 40) {
             salary = (hours * 40) + ((hours - 40) * hourlyWage * 1.5);
+            formatSalary = String.format("%.2f", salary);
         }
 
-        
-
-
-
-
-
+        System.out.printf("%-15s %-15s %-15s %-15s %n", "Name: ", "Wage: ", "Hours: ", "Salary: " );
+        System.out.printf("%-15s %-15s %-15s %-15s %n", employeeName, hourlyWage, hours, "$" + formatSalary);
 
     }
+    
 }
