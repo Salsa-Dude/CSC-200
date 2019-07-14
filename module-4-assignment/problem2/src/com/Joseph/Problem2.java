@@ -47,5 +47,5 @@ public class Problem2 {
         System.out.printf("%-15s %-15s %-15s %-15s %n", employeeName, hourlyWage, hours, "$" + formatSalary);
 
     }
-    
+
 }
